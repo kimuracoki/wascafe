@@ -10,8 +10,9 @@ export const App = () => {
 
   return (
     <>
-      <CssBaseline />
+      
       <ThemeProvider theme={theme}>
+      <CssBaseline />
         <BrowserRouter>
           <Header />
           <Router />
@@ -27,8 +28,20 @@ const theme = createTheme({
     primary: {
       main: brown[200],
     },
+    background: {
+      default: '#F3EEEC',
+    }
   },
   typography: {
     fontFamily: "\"Kiwi Maru\", serif",
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 1080, // 900 から変更
+      lg: 1200,
+      xl: 1536,
+    },
   }
 });

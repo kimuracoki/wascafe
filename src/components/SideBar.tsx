@@ -7,7 +7,11 @@ export const SideBar = (props: Props) => (
         open={props.drawerOpen}
         onClose={props.onToggleDrawer}
     >
-        <Box width={250} role="presentation" onClick={props.onToggleDrawer}>
+        <Box
+            width={250}
+            role="presentation"
+            onClick={props.onToggleDrawer}
+        >
             <DrawerHeader>
 
             </DrawerHeader>

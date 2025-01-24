@@ -6,15 +6,15 @@ export const Menu = () => {
     const [value, setValue] = useState(0);
 
     const handleChange = (e: React.SyntheticEvent, newValue: number) => {
+        e.preventDefault();
         setValue(newValue);
     };
     return (
-        <Container sx={{ width: '100%' }}>
+        <Container sx={{ width: '80vw' }}>
             <Container>
                 <Tabs value={value} onChange={handleChange} >
-                    <Tab label="コーヒー" />
-                    <Tab label="紅茶"/>
-                    <Tab label="ソフトドリンク"  />
+                    <Tab label="ドリンク" />
+                    <Tab label="フード"/>
                 </Tabs>
             </Container>
             <CustomTabPanel value={value} index={0}>

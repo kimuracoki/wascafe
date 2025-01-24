@@ -1,20 +1,22 @@
-import { AppBar, Typography } from "@mui/material";
+import { AppBar, Container, Typography } from "@mui/material";
 
 function Footer() {
     return (
-        <AppBar position="static" sx={{ top: 'auto', bottom: 0, textAlign: 'center', color: '#fff' }}>
-            <Typography>
-                was cafe
-            </Typography>
-            <Typography>
-                愛知県名古屋市天白区植田本町00-00
-            </Typography>
-            <Typography sx={{ height: 50 }}>
-                <small>&copy; 2024 atelier yomi.</small>
-            </Typography>
-            <Typography>
-                このサイトは架空のサイトになります。このページで使用している写真は全てサンプルです。
-            </Typography>
+        <AppBar component="footer" position="static" sx={{ top: 'auto', bottom: 0, textAlign: 'center', color: '#fff' }}>
+            <Container disableGutters maxWidth="md">
+                <Typography>
+                    was cafe
+                </Typography>
+                <Typography>
+                    愛知県名古屋市天白区植田本町00-00
+                </Typography>
+                <Typography sx={{ height: 50 }}>
+                    <small>&copy; 2024 atelier yomi.</small>
+                </Typography>
+                <Typography>
+                    このサイトは架空のサイトになります。このページで使用している写真は全てサンプルです。
+                </Typography>
+            </Container>
         </AppBar>
     );
 }

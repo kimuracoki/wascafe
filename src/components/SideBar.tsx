@@ -1,7 +1,9 @@
 import { Box, Drawer, Icon, List, ListItem, ListItemButton, ListItemIcon, ListItemText, styled, } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
-export const SideBar = (props: Props) => (
-    <Drawer
+export const SideBar = (props: Props) => {
+    const navigate = useNavigate();
+    return (<Drawer
         variant="temporary"
         anchor="right"
         open={props.drawerOpen}
@@ -17,7 +19,7 @@ export const SideBar = (props: Props) => (
             </DrawerHeader>
             <List>
                 <ListItem disablePadding>
-                    <ListItemButton aria-label="list-share">
+                    <ListItemButton onClick={() => { navigate('/home'); }}>
                         <ListItemIcon>
                             <Icon>home</Icon>
                         </ListItemIcon>
@@ -25,7 +27,7 @@ export const SideBar = (props: Props) => (
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
-                    <ListItemButton aria-label="list-share">
+                    <ListItemButton onClick={() => { navigate('/about'); }}>
                         <ListItemIcon>
                             <Icon>face</Icon>
                         </ListItemIcon>
@@ -33,7 +35,7 @@ export const SideBar = (props: Props) => (
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
-                    <ListItemButton aria-label="list-share">
+                    <ListItemButton onClick={() => { navigate('/menu'); }}>
                         <ListItemIcon>
                             <Icon>restaurant</Icon>
                         </ListItemIcon>
@@ -41,7 +43,7 @@ export const SideBar = (props: Props) => (
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
-                    <ListItemButton aria-label="list-share">
+                    <ListItemButton onClick={() => { navigate('/contact'); }}>
                         <ListItemIcon>
                             <Icon>mail</Icon>
                         </ListItemIcon>
@@ -51,7 +53,8 @@ export const SideBar = (props: Props) => (
             </List>
         </Box>
     </Drawer>
-);
+    )
+};
 
 type Props = {
     drawerOpen: boolean;

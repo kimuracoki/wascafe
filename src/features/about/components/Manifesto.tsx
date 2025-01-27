@@ -9,16 +9,16 @@ function Manifesto(props: Props) {
                     marginLeft: 'auto',
                 }),
                 width: { xs: '100%', sm: '500px', md: '500px' },
-                padding: {xs: '20px 20px',sm:'80px 30px'},
+                padding: { xs: '20px 20px', sm: '80px 30px' },
                 backgroundColor: '#ffffff90',
-                textAlign: {xs: 'center', sm: 'left'},
+                textAlign: { xs: 'center', sm: 'left' },
             }}
         >
             <Typography sx={{
                 whiteSpace: 'pre-line',
                 lineHeight: '2rem',
                 fontSize: { xs: '12px', sm: '20px' },
-                paddingBottom: {xs: '30px', sm: '50px'}
+                paddingBottom: { xs: '30px', sm: '50px' }
             }}>
                 {props.mainCopy}
             </Typography>

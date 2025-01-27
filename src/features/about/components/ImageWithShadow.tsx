@@ -3,10 +3,12 @@ import { Box } from "@mui/material";
 function ImageWithShadow(props: Props) {
     return (
         <Box sx={{
-            margin: {xs: 'auto'},
             ...(props.position === 'right' && {
-                marginRight: '60px',
+                marginRight: { xs: 'auto', sm: '60px' },
                 marginLeft: 'auto',
+            }),
+            ...(props.position === 'left' && {
+                margin: { xs: 'auto', sm: '0' },
             }),
             width: '100%',
             maxWidth: '400px',

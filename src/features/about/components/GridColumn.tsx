@@ -15,5 +15,4 @@ type Props = {
     children: ReactElement;
 }
 
-
 export default GridColumn;

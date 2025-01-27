@@ -1,4 +1,3 @@
-import RecipeCard from "@/components/RecipeCard";
 import { Box, Container, Tab, Tabs } from "@mui/material";
 import { useState } from "react";
 
@@ -14,11 +13,10 @@ export const Menu = () => {
             <Container>
                 <Tabs value={value} onChange={handleChange} >
                     <Tab label="ドリンク" />
-                    <Tab label="フード"/>
+                    <Tab label="フード" />
                 </Tabs>
             </Container>
             <CustomTabPanel value={value} index={0}>
-                <RecipeCard />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
                 Item Two

@@ -3,9 +3,11 @@ import { ReactElement } from "react";
 
 function GridColumn(props: Props) {
     return (
-        <Grid2 width={{ xs: '320px', sm: '500px', md: '540px' }}
-            height={{ xs: '320px', sm: '500px', md: '540px' }}
-            sx={{ margin: "0 auto" }}>{props.children}</Grid2>
+        <Grid2 width={{ xs: '100%', sm: '500px', md: '540px' }}
+            sx={{
+                margin: "0 auto",
+                marginBottom: { xs: '', sm: '150px' },
+            }}>{props.children}</Grid2>
     );
 }
 

@@ -4,8 +4,12 @@ import { ReactElement } from "react";
 
 function GridRow(props: Props) {
     return (
-        <Grid2 container direction={props.mode}
-        >{props.children}</Grid2>
+        <Grid2
+            container
+            direction={props.mode}
+        >
+            {props.children}
+        </Grid2>
     );
 }
 

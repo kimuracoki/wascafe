@@ -10,9 +10,9 @@ export const App = () => {
 
   return (
     <>
-      
+
       <ThemeProvider theme={theme}>
-      <CssBaseline />
+        <CssBaseline />
         <BrowserRouter>
           <Header />
           <Router />

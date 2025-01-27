@@ -4,23 +4,28 @@ function Manifesto(props: Props) {
     return (
         <Box
             sx={{
-                width: { xs: '320px', sm: '500px', md: '500px' },
-                height: { xs: '320px', sm: '500px', md: '400px' },
-                padding: '30px',
+                ...(props.position === 'right' && {
+                    marginRight: '0px',
+                    marginLeft: 'auto',
+                }),
+                width: { xs: '100%', sm: '500px', md: '500px' },
+                padding: {xs: '20px 20px',sm:'80px 30px'},
                 backgroundColor: '#ffffff90',
-                marginRight: props.position == 'right' ? '0px' : '',
-                marginLeft: props.position == 'right' ? 'auto' : '',
+                textAlign: {xs: 'center', sm: 'left'},
             }}
         >
             <Typography sx={{
                 whiteSpace: 'pre-line',
                 lineHeight: '2rem',
+                fontSize: { xs: '12px', sm: '20px' },
+                paddingBottom: {xs: '30px', sm: '50px'}
             }}>
                 {props.mainCopy}
             </Typography>
             <Typography sx={{
                 whiteSpace: 'pre-line',
-                lineHeight: '2rem'
+                lineHeight: '2rem',
+                fontSize: { xs: '10px', sm: '16px' },
             }}>
                 {props.subCopy}
             </Typography>

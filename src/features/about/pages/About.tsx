@@ -1,11 +1,11 @@
 import { Box, Container } from "@mui/material";
 import cakeDrinkImage from '@/features/about/assets/cake-and-drink.jpg'
 import Hero from "@/components/Hero";
-import OwnerIntroduction from "../components/OwnerIntroduction";
-import ContentTitle from "@/components/contentTitle";
-import ShopIntroduction from "../components/shopIntroduction";
-import GridRow from "../components/GridRow";
-import GridColumn from "../components/GridColumn";
+import OwnerIntroduction from "@/features/about/components/OwnerIntroduction";
+import ContentTitle from "@/components/ContentTitle";
+import ShopIntroduction from '@/features/about/components/ShopIntroduction';
+import GridRow from "@/features/about/components/GridRow";
+import GridColumn from "@/features/about/components/GridColumn";
 
 export const About = () => {
     return (
@@ -17,12 +17,12 @@ export const About = () => {
             <GridRow mode="row">
                 <GridColumn>
                     <Box>
-                        
+
                     </Box>
                 </GridColumn>
                 <GridColumn>
                     <Box>
-                        
+
                     </Box>
                 </GridColumn>
             </GridRow>

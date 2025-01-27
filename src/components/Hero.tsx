@@ -8,8 +8,8 @@ function Hero(props: Props) {
             objectFit: 'cover',
             backgroundImage: `url(${props.imageUrl})`,
             backgroundRepeat: 'no-repeat',
-            backgroundSize: 'contain'
-
+            backgroundSize: 'contain',
+            marginBottom: { xs: '30px', sm: '100px' },
         }}></Box>
     );
 }

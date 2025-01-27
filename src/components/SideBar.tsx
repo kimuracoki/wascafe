@@ -14,7 +14,7 @@ export const SideBar = (props: Props) => {
             role="presentation"
             onClick={props.onToggleDrawer}
         >
-            <DrawerHeader>
+            <DrawerHeader >
 
             </DrawerHeader>
             <List>

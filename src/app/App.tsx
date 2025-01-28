@@ -1,19 +1,20 @@
 import { BrowserRouter } from "react-router-dom";
-import { Router } from "../routes/Router";
+import { Router } from "@/routes/Router";
 import { createTheme, CssBaseline } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
 import { brown } from "@mui/material/colors";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/routes/ScrollToTop";
 
 export const App = () => {
 
   return (
     <>
-
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <BrowserRouter>
+          <ScrollToTop />
           <Header />
           <Router />
           <Footer />

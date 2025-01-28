@@ -1,4 +1,4 @@
-import ContentTitle from "@/components/contentTitle";
+import ContentTitle from "@/components/ContentTitle";
 import { Container, Typography } from "@mui/material";
 
 function OwnerIntroduction() {

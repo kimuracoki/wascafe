@@ -1,4 +1,4 @@
-const data = {
+const copyTexts: CopyTexts = {
   firstMainCopy: `訪れるみなさまの憩いの場所でありたい。
         ワズカフェは、
         誰もがハッピーな気持ちになれる、
@@ -26,4 +26,15 @@ const data = {
         みなさまが安心してお過ごしいただける空間づくりを心がけています。`,
 };
 
-export default data;
+type CopyTexts = {
+  firstMainCopy: string;
+  firstSubCopy: string;
+  secondMainCopy: string;
+  secondSubCopy: string;
+  thirdMainCopy: string;
+  thirdSubCopy: string;
+  fourthMainCopy: string;
+  fourthSubCopy: string;
+};
+
+export default copyTexts;

@@ -1,4 +1,4 @@
-import ContentTitle from "@/components/contentTitle";
+import ContentTitle from "@/components/ContentTitle";
 import { Box } from "@mui/material";
 import GridRow from "./GridRow";
 import GridColumn from "./GridColumn";

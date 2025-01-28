@@ -36,7 +36,6 @@ function MenuItem(props: Props) {
                     <Typography
                         sx={{
                             whiteSpace: 'pre-line',
-                            lineHeight: '2rem',
                             fontSize: { xs: '12px', sm: '16px' },
                             marginBottom: '30px'
                         }}>{props.description}</Typography>

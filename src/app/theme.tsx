@@ -12,6 +12,9 @@ const theme = createTheme({
   },
   typography: {
     fontFamily: '"Kiwi Maru", serif',
+    allVariants: {
+      lineHeight: '2rem'
+    }
   },
   breakpoints: {
     values: {

@@ -1,5 +1,5 @@
 import { Box, Container, Typography } from "@mui/material";
-import latteArtImage from '@/assets/latte-art.jpg'
+import latteArtImage from '@/features/home/assets/latte-art.jpg'
 
 export const Home = () => {
 

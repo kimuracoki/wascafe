@@ -1,7 +1,7 @@
 import { AppBar, Box, Container, Icon, IconButton, MenuItem, Toolbar, Typography } from "@mui/material";
 import { css } from "@emotion/react";
 import { useNavigate } from "react-router-dom";
-import logo from '@/assets/white_logo.svg'
+import logo from '@/assets/logo.svg'
 
 export const ToolBar = (props: Props) => {
     const navigate = useNavigate();

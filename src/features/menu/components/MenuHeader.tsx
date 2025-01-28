@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
-function MenuHeader() {
+function MenuHeader(props: Props) {
     return (
         <Box
             sx={{ textAlign: 'center' }}
@@ -10,7 +10,7 @@ function MenuHeader() {
                     fontSize: { xs: '18px', sm: '20px' },
                     paddingBottom: { xs: '10px', sm: '20px' },
                 }}
-            >コーヒー</Typography>
+            >{props.title}</Typography>
             <Typography
                 sx={{
                     whiteSpace: 'pre-line',
@@ -18,11 +18,15 @@ function MenuHeader() {
                     fontSize: { xs: '12px', sm: '16px' },
                     paddingBottom: { xs: '30px', sm: '50px' },
                 }}
-            >{`ワズカフェのコーヒーはコロンビア産・エチオピア産の豆をベースにした
-                オリジナルブレンドをオーダーごとにドリップします。
-                淹れたての香りと、酸味・苦味・コクが調和した奥深い味をお楽しみください。`}</Typography>
+            >{props.copy}</Typography>
         </Box>
     );
 }
+
+type Props = {
+    title: string;
+    copy: string;
+};
+
 
 export default MenuHeader;

@@ -43,10 +43,65 @@ const drinkMenuTexts: DrinkMenuTexts = {
       },
     ],
   },
+  tea: {
+    title: `紅茶`,
+    copy: `お食事にも合うすっきりとした味わいの茶葉をブレンドしています。
+    ホットはティーポット（ティーカップ約2杯分）でお出しします。`,
+    menu: [
+      {
+        item: `ダージリンブレンドティー（ホット/アイス）`,
+        price: `528円（税込）`,
+        description: `香り高いダージリンをベースにアッサムをブレンドしています。`,
+      },
+      {
+        item: `ナチュラルアールグレイ（ホット/アイス）`,
+        price: `528円（税込）`,
+        description: `爽やかなベルガモットの香りが特徴の定番です。`,
+      },
+      {
+        item: `マスカットジャスミン（ホット/アイス）`,
+        price: `550円（税込）`,
+        description: `オリエンタルな香りのジャスミンティーに瑞々しいマスカットを加えました。`,
+      },
+      {
+        item: `ゲットクリーン（ホット/アイス）`,
+        price: `550円（税込）`,
+        description: `ハイビスカスの酸味とミントの爽やかさが絶妙のリラックスティーです。`,
+      },
+    ],
+  },
+  softDrink: {
+    title: `ソフトドリンク`,
+    copy: ``,
+    menu: [
+      {
+        item: `アップルジュース`,
+        price: `418円（税込）`,
+        description: ``,
+      },
+      {
+        item: `オレンジジュール`,
+        price: `418円（税込）`,
+        description: ``,
+      },
+      {
+        item: `コーラ`,
+        price: `418円（税込）`,
+        description: ``,
+      },
+      {
+        item: `ガス入りミネラルウォーター`,
+        price: `418円（税込）`,
+        description: ``,
+      },
+    ],
+  },
 };
 
 type DrinkMenuTexts = {
   coffee: MenuCategory;
+  tea: MenuCategory;
+  softDrink: MenuCategory;
 };
 
 type MenuCategory = {

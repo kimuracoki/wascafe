@@ -1,4 +1,5 @@
-import { Box } from "@mui/material";
+import { Box, SxProps, Theme } from "@mui/material";
+import { ReactElement } from "react";
 
 function Hero(props: Props) {
     return (
@@ -12,12 +13,16 @@ function Hero(props: Props) {
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'contain',
                 marginBottom: { xs: '30px', sm: '100px' },
-            }}></Box>
+                borderRadius: '0 0 15px 15px',
+                ...(props.sx || {}),
+            }}>{props.children}</Box>
     );
 }
 
 type Props = {
     imageUrl: string;
+    children?: ReactElement | undefined;
+    sx?: SxProps<Theme> | undefined;
 }
 
 export default Hero;

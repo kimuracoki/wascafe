@@ -2,6 +2,9 @@ import { Container, Typography } from "@mui/material";
 import cakeIcecream from '@/features/home/assets/cake-icecream.jpg'
 import Hero from "@/components/Hero";
 import ContentTitle from "@/components/ContentTitle";
+import informationTexts from '@/features/home/assets/informationTexts';
+import InformationRow from "./components/InformationRow";
+
 
 export const Home = () => {
 
@@ -29,6 +32,16 @@ export const Home = () => {
                 >2025年3月3日（月）オープン</Typography>
             </Hero>
             <ContentTitle title="お知らせ" />
+            <Container
+                component="dl"
+                sx={{
+                    width: {xs: '100%', sm: '60vw'}
+                }}
+            >
+                {informationTexts.map((x, i) => (
+                    <InformationRow key={i} date={x.date} header={x.header} />
+                ))}
+            </Container>
         </Container>
     );
 }

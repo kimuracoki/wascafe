@@ -1,8 +1,8 @@
 import ContentTitle from "@/components/ContentTitle";
 import { Button, Checkbox, Container, FormControl, FormControlLabel, FormHelperText, Grid2, Radio, RadioGroup, TextField, Typography } from "@mui/material";
 import { useState } from "react";
-import FormLabelColumn from "../components/FormLabelColumn";
-import FormComponentColumn from "../components/FormComponentColumn";
+import FormLabelColumn from "./components/FormLabelColumn";
+import FormComponentColumn from "./components/FormComponentColumn";
 
 export const Contact = () => {
     const [formData, setFormData] = useState({

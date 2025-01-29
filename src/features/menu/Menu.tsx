@@ -1,8 +1,8 @@
 import ContentTitle from "@/components/ContentTitle";
 import { Container, Tab, Tabs } from "@mui/material";
 import { useState } from "react";
-import DrinkMenu from "../components/DrinkMenu";
-import FoodMenu from "../components/FoodMenu";
+import DrinkMenu from "./components/DrinkMenu";
+import FoodMenu from "./components/FoodMenu";
 
 export const Menu = () => {
     const [activeIndex, setActiveIndex] = useState(0);

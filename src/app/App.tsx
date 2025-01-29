@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/routes/ScrollToTop";
 import theme from "./theme";
+import LoadingScreen from "@/components/LoadingScreen";
 
 export const App = () => {
 
@@ -15,6 +16,7 @@ export const App = () => {
         <CssBaseline />
         <BrowserRouter>
           <ScrollToTop />
+          <LoadingScreen />
           <Header />
           <Router />
           <Footer />

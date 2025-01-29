@@ -1,4 +1,4 @@
-import { Grid2, Typography } from "@mui/material";
+import { Grid2, Link, Typography } from "@mui/material";
 
 function InformationRow(props: Props) {
     return (
@@ -10,13 +10,14 @@ function InformationRow(props: Props) {
             <Grid2 width={{
                 xs: '100%', sm: '400px'
             }}>
-                <Typography
+                <Link href="#" color="inherit"><Typography
                     component="dd"
                     sx={{
                         whiteSpace: 'pre-line',
                         fontSize: { xs: '12px', sm: '16px' },
                         marginBottom: '30px'
                     }}>{props.header}</Typography>
+                </Link>
             </Grid2>
         </Grid2>
     );

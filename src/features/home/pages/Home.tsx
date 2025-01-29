@@ -6,7 +6,13 @@ import ContentTitle from "@/components/ContentTitle";
 export const Home = () => {
 
     return (
-        <Container disableGutters maxWidth="md">
+        <Container
+            disableGutters
+            maxWidth="md"
+            sx={{
+                minHeight: '100vh',
+            }}
+        >
             <Hero sx={{
                 display: 'flex',
                 justifyContent: 'end',

@@ -153,6 +153,11 @@ export const Contact = () => {
                             value={formData.inquiryType}
                             onChange={handleChange}
                             row
+                            sx={{
+                                display: 'flex',
+                                justifyContent: 'space-between', 
+                                width: '80%', 
+                              }}
                         >
                             <FormControlLabel value="お席の予約" control={<Radio />} label="お席の予約" />
                             <FormControlLabel value="貸切のご相談" control={<Radio />} label="貸切のご相談" />

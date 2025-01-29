@@ -9,6 +9,7 @@ import dripCoffeeImage from '@/features/about/assets/drip-coffee.jpg';
 import breadImage from '@/features/about/assets/bread.jpg';
 import gardenImage from '@/features/about/assets/garden.jpg';
 import copyTexts from '@/features/about/assets/copyTexts';
+import { FadeIn } from "@/components/FadeIn";
 
 function ShopIntroduction() {
     return (
@@ -16,34 +17,50 @@ function ShopIntroduction() {
             <ContentTitle title="wasについて" />
             <GridRow mode="row">
                 <GridColumn>
-                    <Manifesto position="left" mainCopy={copyTexts.firstMainCopy} subCopy={copyTexts.firstSubCopy} />
+                    <FadeIn>
+                        <Manifesto position="left" mainCopy={copyTexts.firstMainCopy} subCopy={copyTexts.firstSubCopy} />
+                    </FadeIn>
                 </GridColumn>
                 <GridColumn>
-                    <ImageWithShadow position="right" imageUrl={entranceImage} />
+                    <FadeIn>
+                        <ImageWithShadow position="right" imageUrl={entranceImage} />
+                    </FadeIn>
                 </GridColumn>
             </GridRow>
             <GridRow mode="row-reverse">
                 <GridColumn>
-                    <Manifesto position="right" mainCopy={copyTexts.secondMainCopy} subCopy={copyTexts.secondSubCopy} />
+                    <FadeIn>
+                        <Manifesto position="right" mainCopy={copyTexts.secondMainCopy} subCopy={copyTexts.secondSubCopy} />
+                    </FadeIn>
                 </GridColumn>
                 <GridColumn>
-                    <ImageWithShadow position="left" imageUrl={dripCoffeeImage} />
+                    <FadeIn>
+                        <ImageWithShadow position="left" imageUrl={dripCoffeeImage} />
+                    </FadeIn>
                 </GridColumn>
             </GridRow>
             <GridRow mode="row">
                 <GridColumn>
-                    <Manifesto position="left" mainCopy={copyTexts.thirdMainCopy} subCopy={copyTexts.thirdSubCopy} />
+                    <FadeIn>
+                        <Manifesto position="left" mainCopy={copyTexts.thirdMainCopy} subCopy={copyTexts.thirdSubCopy} />
+                    </FadeIn>
                 </GridColumn>
                 <GridColumn>
-                    <ImageWithShadow position="right" imageUrl={breadImage} />
+                    <FadeIn>
+                        <ImageWithShadow position="right" imageUrl={breadImage} />
+                    </FadeIn>
                 </GridColumn>
             </GridRow>
             <GridRow mode="row-reverse">
                 <GridColumn>
-                    <Manifesto position="right" mainCopy={copyTexts.fourthMainCopy} subCopy={copyTexts.fourthSubCopy} />
+                    <FadeIn>
+                        <Manifesto position="right" mainCopy={copyTexts.fourthMainCopy} subCopy={copyTexts.fourthSubCopy} />
+                    </FadeIn>
                 </GridColumn>
                 <GridColumn>
-                    <ImageWithShadow position="left" imageUrl={gardenImage} />
+                    <FadeIn>
+                        <ImageWithShadow position="left" imageUrl={gardenImage} />
+                    </FadeIn>
                 </GridColumn>
             </GridRow>
         </Box>

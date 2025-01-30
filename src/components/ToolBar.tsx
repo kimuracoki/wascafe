@@ -1,7 +1,7 @@
 import { AppBar, Box, Container, Icon, IconButton, MenuItem, Toolbar, Typography } from "@mui/material";
 import { css } from "@emotion/react";
 import { useNavigate } from "react-router-dom";
-import logo from '@/assets/logo.svg'
+import Logo from '@/assets/logo.svg?react'
 
 export const ToolBar = (props: Props) => {
     const navigate = useNavigate();
@@ -10,7 +10,14 @@ export const ToolBar = (props: Props) => {
             <Container disableGutters maxWidth="md">
                 <Toolbar css={style.toolbar}>
                     <IconButton onClick={() => { navigate('/home'); }}>
-                        <img width={100} src={logo} />
+                        <Typography
+                            component="h1"
+                            sx={{
+                                width: { xs: 80, sm: 100 },
+                                margin: '0 auto',
+                            }}>
+                            <Logo />
+                        </Typography>
                     </IconButton>
                     <IconButton
                         sx={{ display: { xs: 'block', md: 'none' } }}

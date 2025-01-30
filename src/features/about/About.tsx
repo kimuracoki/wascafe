@@ -6,6 +6,10 @@ import ContentTitle from "@/components/ContentTitle";
 import ShopIntroduction from '@/features/about/components/ShopIntroduction';
 import GridRow from "@/features/about/components/GridRow";
 import GridColumn from "@/features/about/components/GridColumn";
+import Access from "./components/Access";
+import overviewTexts from '@/features/about/assets/overviewTexts';
+import Overview from "./components/Overview";
+
 
 export const About = () => {
     return (
@@ -17,14 +21,12 @@ export const About = () => {
             <GridRow mode="row">
                 <GridColumn>
                     <Box>
-
+                        {overviewTexts.map((x, i) => (
+                            <Overview key={i} title={x.title} description={x.description} />
+                        ))}
                     </Box>
                 </GridColumn>
-                <GridColumn>
-                    <Box>
-
-                    </Box>
-                </GridColumn>
+                <Access />
             </GridRow>
         </Container >
     );

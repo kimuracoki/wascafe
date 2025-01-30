@@ -1,31 +1,32 @@
-import { Grid2, Typography } from "@mui/material";
+import ContentTitle from "@/components/ContentTitle";
+import { Box } from "@mui/material";
+import GridRow from "./GridRow";
+import GridColumn from "./GridColumn";
+import OverviewRow from "./OverviewRow";
+import Access from "./Access";
+import overviewTexts from '@/features/about/assets/overviewTexts';
 
-function Overview(props: Props) {
+function Overview() {
     return (
-        <Grid2 container direction="row">
-            <Grid2
-                width={{ xs: '100%', sm: '150px' }}>
-                <Typography component="dt">{props.title}</Typography>
-            </Grid2>
-            <Grid2 width={{
-                xs: '100%', sm: '300px'
-            }}>
-                <Typography
-                    component="dd"
-                    sx={{
-                        whiteSpace: 'pre-line',
-                        fontSize: { xs: '12px', sm: '16px' },
-                        marginBottom: '30px'
-                    }}>{props.description}</Typography>
-            </Grid2>
-        </Grid2>
+        <Box
+            sx={{
+                marginBottom: '150px'
+            }}
+        >
+            <ContentTitle title="店舗概要" />
+            <GridRow mode="row">
+                <GridColumn>
+                    <Box>
+                        {overviewTexts.map((x, i) => (
+                            <OverviewRow key={i} title={x.title} description={x.description} />
+                        ))}
+                    </Box>
+                </GridColumn>
+                <Access />
+            </GridRow>
+        </Box>
     );
 }
 
-type Props = {
-    key?: number;
-    title: string;
-    description: string;
-};
 
 export default Overview;

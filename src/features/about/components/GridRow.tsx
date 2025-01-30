@@ -7,6 +7,9 @@ function GridRow(props: Props) {
         <Grid2
             container
             direction={props.mode}
+            sx={{
+                marginBottom: { xs: '0', sm: '150px' },
+            }}
         >
             {props.children}
         </Grid2>

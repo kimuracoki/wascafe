@@ -1,16 +1,16 @@
 import { Box } from "@mui/material";
 import GridColumn from "./GridColumn";
-import Overview from "./Overview";
+import OverviewRow from "./OverviewRow";
 
 function Access() {
     return (
         <GridColumn>
             <Box>
-                <Overview
+                <OverviewRow
                     title="所在地"
                     description={`〒012-3456
                     愛知県名古屋市天白区植田本町00-00`} />
-                <Overview
+                <OverviewRow
                     title="駐車場"
                     description="20台" />
                 <Box

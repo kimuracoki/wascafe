@@ -1,5 +1,5 @@
 import ContentTitle from "@/components/ContentTitle";
-import { Box } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import GridRow from "./GridRow";
 import GridColumn from "./GridColumn";
 import OverviewRow from "./OverviewRow";
@@ -8,9 +8,12 @@ import overviewTexts from '@/features/about/assets/overviewTexts';
 
 function Overview() {
     return (
-        <Box
+        <Container
+            component="section"
+            maxWidth="sm"
             sx={{
-                marginBottom: '150px'
+                width: { xs: '320px', sm: '100%' },
+                marginBottom: '100px',
             }}
         >
             <ContentTitle title="店舗概要" />
@@ -24,7 +27,7 @@ function Overview() {
                 </GridColumn>
                 <Access />
             </GridRow>
-        </Box>
+        </Container>
     );
 }
 

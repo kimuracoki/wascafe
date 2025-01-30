@@ -5,7 +5,13 @@ function OverviewRow(props: Props) {
         <Grid2 container direction="row">
             <Grid2
                 width={{ xs: '100%', sm: '150px' }}>
-                <Typography component="dt">{props.title}</Typography>
+                <Typography
+                    sx={{
+                        fontSize: { xs: '12px', sm: '20px' },
+                    }}
+                    component="dt">
+                    {props.title}
+                </Typography>
             </Grid2>
             <Grid2 width={{
                 xs: '100%', sm: '300px'
@@ -14,8 +20,9 @@ function OverviewRow(props: Props) {
                     component="dd"
                     sx={{
                         whiteSpace: 'pre-line',
-                        fontSize: { xs: '12px', sm: '16px' },
-                        marginBottom: '30px'
+                        fontSize: { xs: '10px', sm: '16px' },
+                        marginBottom: {xs: '10px', sm: '30px'},
+                        lineHeight: {xs: '1rem', sm: '2rem'}
                     }}>{props.description}</Typography>
             </Grid2>
         </Grid2>

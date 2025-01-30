@@ -26,10 +26,6 @@ const overview: Overview[] = [
     description: `テーブル席 40席
     カウンター 10席`,
   },
-  {
-    title: `駐車場`,
-    description: `20台`,
-  },
 ];
 
 type Overview = {

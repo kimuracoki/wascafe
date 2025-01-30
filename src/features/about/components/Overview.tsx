@@ -23,7 +23,7 @@ function Overview(props: Props) {
 }
 
 type Props = {
-    key: number;
+    key?: number;
     title: string;
     description: string;
 };

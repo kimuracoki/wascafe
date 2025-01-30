@@ -14,7 +14,7 @@ export const App = () => {
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <BrowserRouter>
+        <BrowserRouter  basename="/marketing/dai43/01">
           <ScrollToTop />
           <LoadingScreen />
           <Header />

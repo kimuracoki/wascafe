@@ -5,7 +5,14 @@ function InformationRow(props: Props) {
         <Grid2 container direction="row">
             <Grid2
                 width={{ xs: '100%', sm: '200px' }}>
-                <Typography component="dt">{props.date}</Typography>
+                <Typography
+                    component="dt"
+                    sx={{
+                        fontSize: { xs: '12px', sm: '16px' },
+                    }}
+                >
+                    {props.date}
+                </Typography>
             </Grid2>
             <Grid2 width={{
                 xs: '100%', sm: '400px'

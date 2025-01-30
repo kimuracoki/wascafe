@@ -13,7 +13,7 @@ export const Home = () => {
             disableGutters
             maxWidth="md"
             sx={{
-                minHeight: '100vh',
+                marginBottom: '100px'
             }}
         >
             <Hero sx={{
@@ -27,7 +27,7 @@ export const Home = () => {
                         color: '#fff',
                         margin: '0 20px 20px',
                         textShadow: '3px 3px 5px #9e9e9e',
-                        fontSize: { xs: '16px', sm: '30px' },
+                        fontSize: { xs: '14px', sm: '30px' },
                     }}
                 >2025年3月3日（月）オープン</Typography>
             </Hero>
@@ -35,7 +35,7 @@ export const Home = () => {
             <Container
                 component="dl"
                 sx={{
-                    width: {xs: '100%', sm: '60vw'}
+                    width: {xs: '100%', sm: '60vw', md: '40vw'}
                 }}
             >
                 {informationTexts.map((x, i) => (

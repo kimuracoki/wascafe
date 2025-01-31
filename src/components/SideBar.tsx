@@ -1,5 +1,7 @@
-import { Box, Drawer, Icon, List, ListItem, ListItemButton, ListItemIcon, ListItemText, styled, useTheme, } from "@mui/material";
+import { Box, Drawer, Icon, List, ListItem, ListItemButton, ListItemIcon, ListItemText, styled, Typography, useTheme, } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import Logo from '@/assets/logo.svg?react'
+
 
 export const SideBar = (props: Props) => {
     const navigate = useNavigate();
@@ -32,7 +34,14 @@ export const SideBar = (props: Props) => {
                 onClick={props.onToggleDrawer}
             >
                 <DrawerHeader >
-
+                    <Typography
+                        component="h2"
+                        sx={{
+                            width: 80,
+                            margin: '0 auto',
+                        }}>
+                        <Logo />
+                    </Typography>
                 </DrawerHeader>
                 <List>
                     <ListItem disablePadding>

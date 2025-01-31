@@ -1,8 +1,9 @@
 import ContentTitle from "@/components/ContentTitle";
-import { Button, Checkbox, Container, FormControl, FormControlLabel, FormHelperText, Grid2, Radio, RadioGroup, TextField, Typography } from "@mui/material";
+import { Box, Button, Checkbox, Container, FormControl, FormControlLabel, FormHelperText, Grid2, Radio, RadioGroup, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import FormLabelColumn from "./components/FormLabelColumn";
 import FormComponentColumn from "./components/FormComponentColumn";
+import FormRow from "./components/FormRow";
 
 export const Contact = () => {
     const [formData, setFormData] = useState({
@@ -65,22 +66,28 @@ export const Contact = () => {
             maxWidth="md"
             sx={{
                 paddingTop: '100px',
-                minHeight: '100vh'
+                width: { xs: '300px', sm: '80%' },
             }} >
             <ContentTitle title="お問い合わせ" />
-            <Typography
+            <Box
                 sx={{
-                    whiteSpace: 'pre-line',
-                    lineHeight: '2rem',
-                }}>{`ワズカフェでは、お席のご予約、お誕生日のお祝いや貸切のご相談などを随時受け付けております。
-                        お気軽にお問い合わせください。`}</Typography>
-            <Grid2
-                container
-                direction="row"
+                    display: 'flex',
+                    justifyContent: 'center',
+                    marginBottom: '80px'
+                }}
             >
-                <FormLabelColumn>
-                    <Typography>お名前（必須）</Typography>
-                </FormLabelColumn>
+                <Typography
+                    sx={{
+                        whiteSpace: 'pre-line',
+                        lineHeight: '2rem',
+                        textAlign: 'center',
+                        fontSize: { xs: '12px', sm: '16px' },
+                    }}>{`ワズカフェでは、お席のご予約、お誕生日のお祝いや貸切のご相談などを随時受け付けております。
+                        お気軽にお問い合わせください。`}
+                </Typography>
+            </Box>
+            <FormRow>
+                <FormLabelColumn>お名前（必須）</FormLabelColumn>
                 <FormComponentColumn>
                     <TextField
                         required
@@ -95,14 +102,9 @@ export const Contact = () => {
                         margin="normal"
                     />
                 </FormComponentColumn>
-            </Grid2>
-            <Grid2
-                container
-                direction="row"
-            >
-                <FormLabelColumn>
-                    <Typography>メールアドレス（必須）</Typography>
-                </FormLabelColumn>
+            </FormRow>
+            <FormRow>
+                <FormLabelColumn>メールアドレス（必須）</FormLabelColumn>
                 <FormComponentColumn>
                     <TextField
                         required
@@ -118,14 +120,9 @@ export const Contact = () => {
                         margin="normal"
                     />
                 </FormComponentColumn>
-            </Grid2>
-            <Grid2
-                container
-                direction="row"
-            >
-                <FormLabelColumn>
-                    <Typography>お電話番号</Typography>
-                </FormLabelColumn>
+            </FormRow>
+            <FormRow>
+                <FormLabelColumn>お電話番号</FormLabelColumn>
                 <FormComponentColumn>
                     <TextField
                         fullWidth
@@ -138,14 +135,9 @@ export const Contact = () => {
                         margin="normal"
                     />
                 </FormComponentColumn>
-            </Grid2>
-            <Grid2
-                container
-                direction="row"
-            >
-                <FormLabelColumn>
-                    <Typography>お問い合わせの種類</Typography>
-                </FormLabelColumn>
+            </FormRow>
+            <FormRow>
+                <FormLabelColumn>お問い合わせの種類</FormLabelColumn>
                 <FormComponentColumn>
                     <FormControl component="fieldset" margin="normal" fullWidth error={errors.inquiryType}>
                         <RadioGroup
@@ -155,27 +147,46 @@ export const Contact = () => {
                             row
                             sx={{
                                 display: 'flex',
-                                justifyContent: 'space-between', 
-                                width: '80%', 
-                              }}
+                                justifyContent: 'space-between',
+                                width: '80%',
+                            }}
                         >
-                            <FormControlLabel value="お席の予約" control={<Radio />} label="お席の予約" />
-                            <FormControlLabel value="貸切のご相談" control={<Radio />} label="貸切のご相談" />
-                            <FormControlLabel value="その他" control={<Radio />} label="その他" />
+                            <FormControlLabel value="お席の予約" control={<Radio />} label={
+                                <Typography
+                                    sx={{
+                                        fontSize: { xs: '12px', sm: '16px' }
+                                    }}>
+                                    お席の予約
+                                </Typography>
+                            } />
+                            <FormControlLabel value="貸切のご相談" control={<Radio />} label={
+                                <Typography
+                                    sx={{
+                                        fontSize: { xs: '12px', sm: '16px' }
+                                    }}>
+                                    貸切のご相談
+                                </Typography>
+                            } />
+                            <FormControlLabel value="その他" control={<Radio />} label={
+                                <Typography
+                                    sx={{
+                                        fontSize: { xs: '12px', sm: '16px' }
+                                    }}>
+                                    その他
+                                </Typography>
+                            } />
                         </RadioGroup>
                         {errors.inquiryType && (
                             <FormHelperText>お問い合わせの種類を選択してください。</FormHelperText>
                         )}
                     </FormControl>
                 </FormComponentColumn>
-            </Grid2>
+            </FormRow>
             <Grid2
                 container
                 direction="row"
             >
-                <FormLabelColumn>
-                    <Typography>お問い合わせ内容</Typography>
-                </FormLabelColumn>
+                <FormLabelColumn>お問い合わせ内容</FormLabelColumn>
                 <FormComponentColumn>
                     <TextField
                         fullWidth
@@ -190,24 +201,54 @@ export const Contact = () => {
                     />
                 </FormComponentColumn>
             </Grid2>
-            <Typography>「プライバシーポリシー」に同意いただける場合は「同意する」にチェックを入れて、お問い合わせ内容を送信してください。</Typography>
-            <FormControl error={errors.agreeToPrivacyPolicy} component="fieldset" margin="normal">
-                <FormControlLabel
-                    control={
-                        <Checkbox
-                            checked={formData.agreeToPrivacyPolicy}
-                            onChange={handleCheckboxChange}
-                            id="agreeToPrivacyPolicy"
-                            name="agreeToPrivacyPolicy"
-                        />
-                    }
-                    label="同意する"
-                />
-                {errors.agreeToPrivacyPolicy && (
-                    <FormHelperText>プライバシーポリシーに同意してください。</FormHelperText>
-                )}
-            </FormControl>
-            <Container>
+            <Box
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                }}
+            >
+                <Typography
+                    sx={{
+                        whiteSpace: 'pre-line',
+                        textAlign: 'center',
+                        fontSize: { xs: '12px', sm: '16px' },
+                        marginTop: '60px'
+                    }}
+                >{`「プライバシーポリシー」に同意いただける場合は、
+                「同意する」にチェックを入れて、お問い合わせ内容を送信してください。`}
+                </Typography>
+            </Box>
+            <Box
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    marginBottom: '40px',
+                }}
+            >
+                <FormControl error={errors.agreeToPrivacyPolicy} component="fieldset" margin="normal">
+                    <FormControlLabel
+                        control={
+                            <Checkbox
+                                checked={formData.agreeToPrivacyPolicy}
+                                onChange={handleCheckboxChange}
+                                id="agreeToPrivacyPolicy"
+                                name="agreeToPrivacyPolicy"
+                            />
+                        }
+                        label="同意する"
+                    />
+                    {errors.agreeToPrivacyPolicy && (
+                        <FormHelperText>プライバシーポリシーに同意してください。</FormHelperText>
+                    )}
+                </FormControl>
+            </Box>
+            <Box
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    marginBottom: '100px'
+                }}
+            >
                 <Button
                     type="submit"
                     variant="contained"
@@ -219,7 +260,7 @@ export const Contact = () => {
                 >
                     送信
                 </Button>
-            </Container>
+            </Box>
         </Container>
     );
 }

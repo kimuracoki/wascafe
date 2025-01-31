@@ -18,7 +18,11 @@ export const Menu = () => {
             }} >
             <ContentTitle
                 title="メニュー" />
-            <Container>
+            <Container
+            sx={{
+                marginBottom: '80px'
+            }}
+            >
                 <Tabs
                     value={activeIndex}
                     onChange={handleChange}

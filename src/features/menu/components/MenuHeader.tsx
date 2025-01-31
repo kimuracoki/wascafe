@@ -3,7 +3,10 @@ import { Box, Typography } from "@mui/material";
 function MenuHeader(props: Props) {
     return (
         <Box
-            sx={{ textAlign: 'center' }}
+            sx={{ 
+                textAlign: 'center',
+                marginBottom: '100px'
+             }}
         >
             <Typography
                 sx={{
@@ -16,7 +19,6 @@ function MenuHeader(props: Props) {
                     whiteSpace: 'pre-line',
                     lineHeight: '2rem',
                     fontSize: { xs: '12px', sm: '16px' },
-                    paddingBottom: { xs: '30px', sm: '50px' },
                 }}
             >{props.copy}</Typography>
         </Box>

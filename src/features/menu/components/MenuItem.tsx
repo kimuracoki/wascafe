@@ -31,6 +31,9 @@ function MenuItem(props: Props) {
             <Grid2
                 container
                 direction="row"
+                sx={{
+                    marginBottom: '50px'
+                }}
             >
                 <Grid2 width="100%">
                     <Typography

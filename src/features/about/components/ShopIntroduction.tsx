@@ -13,7 +13,12 @@ import { FadeIn } from "@/components/FadeIn";
 
 function ShopIntroduction() {
     return (
-        <Box component="section">
+        <Box 
+        component="section"
+        sx={{
+            marginBottom: {xs: '60px', sm: '0'}
+        }}
+        >
             <ContentTitle title="wasについて" />
             <GridRow mode="row">
                 <GridColumn>

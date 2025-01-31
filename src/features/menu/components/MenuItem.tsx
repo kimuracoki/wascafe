@@ -10,7 +10,7 @@ function MenuItem(props: Props) {
                 <Grid2 width={{ xs: '100%', sm: '500px' }}>
                     <Typography
                         sx={{
-                            fontSize: { xs: '16px', sm: '20px' },
+                            fontSize: { xs: '12px', sm: '20px' },
                         }}
                     >{props.item}</Typography>
                 </Grid2>
@@ -23,8 +23,8 @@ function MenuItem(props: Props) {
                 >
                     <Typography
                         sx={{
-                            fontSize: { xs: '16px', sm: '20px' },
-                            textAlign: 'right'
+                            fontSize: { xs: '12px', sm: '20px' },
+                            textAlign: { xs: 'left', sm: 'right' }
                         }}
                     >{props.price}</Typography>
                 </Grid2>
@@ -36,14 +36,15 @@ function MenuItem(props: Props) {
                     marginBottom: '50px'
                 }}
             >
-                <Grid2 width="100%">
-                    <Typography
-                        sx={{
-                            whiteSpace: 'pre-line',
-                            fontSize: { xs: '12px', sm: '16px' },
-                            marginBottom: '30px'
-                        }}>{props.description}</Typography>
-                </Grid2>
+                {props.description.length !== 0 && (
+                    <Grid2 width="100%">
+                        <Typography
+                            sx={{
+                                whiteSpace: 'pre-line',
+                                fontSize: { xs: '10px', sm: '16px' },
+                                marginBottom: '30px'
+                            }}>{props.description}</Typography>
+                    </Grid2>)}
             </Grid2>
         </>
     );

@@ -5,12 +5,12 @@ function MenuHeader(props: Props) {
         <Box
             sx={{ 
                 textAlign: 'center',
-                marginBottom: '100px'
+                margin: {xs: '50px 0', sm:'100px 0'}
              }}
         >
             <Typography
                 sx={{
-                    fontSize: { xs: '18px', sm: '20px' },
+                    fontSize: { xs: '16px', sm: '20px' },
                     paddingBottom: { xs: '10px', sm: '20px' },
                 }}
             >{props.title}</Typography>

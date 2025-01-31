@@ -3,8 +3,8 @@ import { ReactElement } from "react";
 
 function GridColumn(props: Props) {
     return (
-        <Grid2 
-        width={{ xs: '100%', sm: '500px', md: '540px' }}
+        <Grid2
+            width={{ xs: '100%', sm: '500px', md: '540px' }}
             sx={{
                 margin: "0 auto",
             }}>

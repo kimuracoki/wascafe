@@ -6,9 +6,10 @@ function ImageWithShadow(props: Props) {
             ...(props.position === 'right' && {
                 marginRight: { xs: 'auto', sm: '60px' },
                 marginLeft: 'auto',
+                marginTop: { xs: '0', sm: '60px' },
             }),
             ...(props.position === 'left' && {
-                margin: { xs: 'auto', sm: '0' },
+                margin: { xs: 'auto', sm: '60px 0' },
             }),
             width: '100%',
             maxWidth: '400px',

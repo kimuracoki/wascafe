@@ -15,7 +15,7 @@ function MenuItem(props: Props) {
                     >{props.item}</Typography>
                 </Grid2>
                 <Grid2
-                    width={{ xs: '100%', sm: '200px' }}
+                    width={{ xs: '100%', sm: '350px' }}
                     sx={{
                         marginRight: '0',
                         marginLeft: 'auto',
@@ -24,6 +24,7 @@ function MenuItem(props: Props) {
                     <Typography
                         sx={{
                             fontSize: { xs: '16px', sm: '20px' },
+                            textAlign: 'right'
                         }}
                     >{props.price}</Typography>
                 </Grid2>

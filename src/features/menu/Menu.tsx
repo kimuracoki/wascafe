@@ -19,9 +19,9 @@ export const Menu = () => {
             <ContentTitle
                 title="メニュー" />
             <Container
-            sx={{
-                marginBottom: '80px'
-            }}
+                sx={{
+                    marginBottom: '80px'
+                }}
             >
                 <Tabs
                     value={activeIndex}
@@ -34,6 +34,20 @@ export const Menu = () => {
             </Container>
             <DrinkMenu index={0} activeIndex={activeIndex} />
             <FoodMenu index={1} activeIndex={activeIndex} />
+            <Container
+                sx={{
+                    marginBottom: '80px'
+                }}
+            >
+                <Tabs
+                    value={activeIndex}
+                    onChange={handleChange}
+                    centered
+                >
+                    <Tab label="ドリンク" />
+                    <Tab label="フード" />
+                </Tabs>
+            </Container>
         </Container>
     );
 }

@@ -9,8 +9,7 @@ import overviewTexts from '@/features/about/assets/overviewTexts';
 function Overview() {
     return (
         <Container
-            component="section"
-            maxWidth="sm"
+            disableGutters
             sx={{
                 width: { xs: '320px', sm: '100%' },
                 marginBottom: '100px',

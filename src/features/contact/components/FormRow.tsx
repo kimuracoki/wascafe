@@ -7,6 +7,9 @@ function FormRow(props: Props) {
             container
             direction="row"
             height='120px'
+            sx={{
+                marginBottom: {xs: '16px', sm: '0'}
+            }}
         >
             <Grid2 width={{ xs: '100%', sm: '300px' }}>
                 {props.children[0]}

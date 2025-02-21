@@ -9,12 +9,11 @@ import theme from "./theme";
 import LoadingScreen from "@/components/LoadingScreen";
 
 export const App = () => {
-
   return (
     <>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <BrowserRouter  basename="/marketing/dai43/01">
+        <BrowserRouter basename="/marketing/dai43/01">
           <ScrollToTop />
           <LoadingScreen />
           <Header />
@@ -23,5 +22,5 @@ export const App = () => {
         </BrowserRouter>
       </ThemeProvider>
     </>
-  )
+  );
 };

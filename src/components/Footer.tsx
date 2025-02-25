@@ -33,7 +33,7 @@ function Footer() {
                         marginBottom: '5%',
                     }}
                 >
-                    <small>&copy; 2024 atelier yomi.</small>
+                    <small>&copy; 2025 was cafe.</small>
                 </Typography>
                 <Typography
                     sx={{

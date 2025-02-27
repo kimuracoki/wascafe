@@ -15,5 +15,5 @@ export default defineConfig({
       "@": "/src",
     },
   },
-  base: "/marketing/dai43/01/",
+  base: "/marketing/dai43/01/wascafe",
 });
